@@ -53,4 +53,9 @@ searchInput.addEventListener('input', async () => {
     const filteredMovies = filterMovies(movies, searchQuery);
     renderMovies(filteredMovies);
   });
+  // First fetch and render
+(async function () {
+    const movies = await fetchMovies();
+    renderMovies(movies);
+  })();
   
