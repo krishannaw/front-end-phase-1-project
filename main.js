@@ -1,5 +1,5 @@
 console.log('connected')
-// script.js
+// main.js
 
 const moviesContainer = document.getElementById('moviesContainer');
 const searchInput = document.getElementById('searchInput');
@@ -7,7 +7,7 @@ const searchInput = document.getElementById('searchInput');
 // Fetch movie data from a public API
 async function fetchMovies(searchQuery) {
   try {
-    const response = await fetch('http://www.omdbapi.com/?s=${encodeURIComponent(searchQuery)}');
+    const response = await fetch(`http://www.omdbapi.com/?s=${encodeURIComponent(searchQuery)}`);
     const data = await response.json();
     return data.Search || [];
   } catch (error) {
@@ -23,15 +23,15 @@ function renderMovies(movies) {
       movieElement.classList.add('movie');
   
       const titleElement = document.createElement('h2');
-      titleElement.textContent = movie.title;
+      titleElement.textContent = movie.Title;
       movieElement.appendChild(titleElement);
   
       const genreElement = document.createElement('p');
-      genreElement.textContent = `Genre: ${movie.genre}`;
+      genreElement.textContent = `Genre: ${movie.Type}`;
       movieElement.appendChild(genreElement);
   
       const yearElement = document.createElement('p');
-      yearElement.textContent = `Year: ${movie.year}`;
+      yearElement.textContent = `Year: ${movie.Year}`;
       movieElement.appendChild(yearElement);
   
       moviesContainer.appendChild(movieElement);
