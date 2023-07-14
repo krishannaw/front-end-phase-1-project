@@ -4,10 +4,10 @@ console.log('connected')
 const moviesContainer = document.getElementById('moviesContainer');
 const searchInput = document.getElementById('searchInput');
 
-// Fetch movie data from a public API or your own API (db.json)
+// Fetch movie data from a public API
 async function fetchMovies() {
   try {
-    const response = await fetch('https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/lookup');
+    const response = await fetch('https://api.publicapis.org/entries');
     const data = await response.json();
     return data;
   } catch (error) {
