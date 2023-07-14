@@ -46,4 +46,11 @@ function filterMovies(movies, searchQuery) {
       return title.includes(searchQuery) || genre.includes(searchQuery);
     });
   }
+  // Event listener for search input
+searchInput.addEventListener('input', async () => {
+    const searchQuery = searchInput.value.toLowerCase();
+    const movies = await fetchMovies();
+    const filteredMovies = filterMovies(movies, searchQuery);
+    renderMovies(filteredMovies);
+  });
   
