@@ -16,3 +16,8 @@ body {
     font-size: xx-large;
     margin: 0;
   }
+  
+  h2 {
+    font-family: 'Georgia';
+    font-size: medium;
+  }
