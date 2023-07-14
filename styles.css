@@ -5,9 +5,14 @@ body {
   }
 
   header {
-    font-family: 'Times New Roman';
     background-color: rgb(134, 35, 20);
     color: #0b0202;
     padding: px;
     text-align: center;
+  }
+
+  h1 {
+    font-family: 'Times New Roman';
+    font-size: xx-large;
+    margin: 0;
   }
