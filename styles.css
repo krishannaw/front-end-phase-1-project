@@ -1,13 +1,15 @@
 body {
     font-family: 'Times New Roman';
     font-size: xx-small;
+    background-color: rgb(5, 5, 4);
+    color: rgb(231, 241, 241);
     margin: 0;
     padding: 0;
   }
 
   header {
     background-color: rgb(87, 20, 19);
-    color: #f6eaea;
+    color: #ffffff;
     padding: 5p;
     text-align: center;
   }
@@ -30,3 +32,6 @@ body {
     width: 250px;
   }
   
+  main {
+    padding: 200px;
+  }
