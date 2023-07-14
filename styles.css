@@ -1,13 +1,14 @@
 body {
-    font-family: Brush Script MT, sans-serif;
+    font-family: 'Times New Roman';
+    font-size: xx-small;
     margin: 0;
     padding: 0;
   }
 
   header {
-    background-color: rgb(134, 35, 20);
-    color: #0b0202;
-    padding: px;
+    background-color: rgb(87, 20, 19);
+    color: #f6eaea;
+    padding: 5p;
     text-align: center;
   }
 
@@ -21,3 +22,11 @@ body {
     font-family: 'Georgia';
     font-size: medium;
   }
+
+  #searchInput {
+    font-family: 'Times';
+    margin-top: 1px;
+    padding: 10px;
+    width: 250px;
+  }
+  
