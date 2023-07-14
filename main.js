@@ -5,11 +5,11 @@ const moviesContainer = document.getElementById('moviesContainer');
 const searchInput = document.getElementById('searchInput');
 
 // Fetch movie data from a public API
-async function fetchMovies() {
+async function fetchMovies(searchQuery) {
   try {
-    const response = await fetch('https://api.publicapis.org/entries');
+    const response = await fetch('http://www.omdbapi.com/?s=${encodeURIComponent(searchQuery)}');
     const data = await response.json();
-    return data;
+    return data.Search || [];
   } catch (error) {
     console.log('Error fetching movies:', error);
     return [];
