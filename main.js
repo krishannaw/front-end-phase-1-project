@@ -37,3 +37,13 @@ function renderMovies(movies) {
       moviesContainer.appendChild(movieElement);
     });
   }
+  // Filter movies based on user search
+function filterMovies(movies, searchQuery) {
+    return movies.filter(movie => {
+      const title = movie.title.toLowerCase();
+      const genre = movie.genre.toLowerCase();
+  
+      return title.includes(searchQuery) || genre.includes(searchQuery);
+    });
+  }
+  
