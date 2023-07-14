@@ -15,3 +15,25 @@ async function fetchMovies() {
     return [];
   }
 }
+function renderMovies(movies) {
+    moviesContainer.innerHTML = '';
+  
+    movies.forEach(movie => {
+      const movieElement = document.createElement('div');
+      movieElement.classList.add('movie');
+  
+      const titleElement = document.createElement('h2');
+      titleElement.textContent = movie.title;
+      movieElement.appendChild(titleElement);
+  
+      const genreElement = document.createElement('p');
+      genreElement.textContent = `Genre: ${movie.genre}`;
+      movieElement.appendChild(genreElement);
+  
+      const yearElement = document.createElement('p');
+      yearElement.textContent = `Year: ${movie.year}`;
+      movieElement.appendChild(yearElement);
+  
+      moviesContainer.appendChild(movieElement);
+    });
+  }
